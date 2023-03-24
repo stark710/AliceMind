@@ -1,13 +1,12 @@
 import argparse
 import os
-import ruamel_yaml as yaml
+import ruamel.yaml as yaml
 import numpy as np
 import random
 import time
 import datetime
 import json
 from pathlib import Path
-
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -359,8 +358,8 @@ def main(args, config):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--config', default='./configs/Grounding.yaml')
-    parser.add_argument('--checkpoint', default='')
+    parser.add_argument('--config', default='./configs/pretrain_mplug_base.yaml')
+    parser.add_argument('--checkpoint', default='./mplug_base.pth')
     parser.add_argument('--eval_checkpoint', default='')
     parser.add_argument('--output_dir', default='output/RefCOCO')   
     parser.add_argument('--evaluate', action='store_true')

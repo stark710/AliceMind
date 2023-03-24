@@ -20,7 +20,7 @@ image_res: 336
 batch_size_train: 24
 vision_width: 1024
 distill: True
-clip_name: "ViT-L-14"
+clip_name: "ViT-B-16"
 batch_size_test: 8
 k_test: 128
 

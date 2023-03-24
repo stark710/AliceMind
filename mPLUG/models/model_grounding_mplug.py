@@ -118,7 +118,8 @@ class MPLUG(nn.Module):
         image = image_data.tensors
         image_embeds = self.visual_encoder.visual(image, skip_last_layer=True)
         if self.large:
-            image_embeds = self.dropout(self.visn_layer_norm(self.visn_fc(image_embeds)))
+            #image_embeds = self.dropout(self.visn_layer_norm(self.visn_fc(image_embeds)))
+            image_embeds = self.dropout(self.visn_layer_norm(image_embeds))
         image_atts = torch.ones(image_embeds.size()[:-1], dtype=torch.long).to(image.device)
   
         text = text_data.tensors
