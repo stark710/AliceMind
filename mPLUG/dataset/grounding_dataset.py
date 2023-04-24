@@ -268,6 +268,7 @@ class VisualGroundingDataset(data.Dataset):
         for split in splits:
             imgset_file = '{0}_{1}.pth'.format(self.dataset, split)
             imgset_path = osp.join(dataset_path, imgset_file)
+            # imgset_path = './Man+riding+horse+painting+16x9.jpg'
             self.images += torch.load(imgset_path)
 
         # assign item id as the last
